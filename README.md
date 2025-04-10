@@ -18,7 +18,8 @@ git clone https://github.com/Vitoria892/Desafio3.git
 git clone cd Desafio03
 ```
 ```
-3. ```bash
+3.
+```bash
 git clone Acesse o arquivo index.html no seu navegador: dê dois clique no arquivo para acessá-lo.
 ```
 ```
