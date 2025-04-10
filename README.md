@@ -13,6 +13,12 @@ git clone https://github.com/Vitoria892/Desafio3.git
 ```
 ```
 
-2.Acesse a pasta: cd desafio03  
-3. Acesse o arquivo index.html no seu navegador: dê dois clique no arquivo para acessá-lo.
-
+2.Acesse a pasta:
+```bash
+git clone cd Desafio03
+```
+```
+3. ```bash
+git clone Acesse o arquivo index.html no seu navegador: dê dois clique no arquivo para acessá-lo.
+```
+```
