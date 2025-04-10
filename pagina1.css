@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Formulário do lado esquerdo */
+.formulario-container {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.voltar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #57534E;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.subtitulo {
+    font-size: 16px;
+    color: #57534E;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.secao-titulo {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.campo-formulario {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #57534E;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #E2E2E2;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #FF8A65;
+}
+
+input::placeholder {
+    color: #A8A29E;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2357534E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+}
+
+/* Área de upload de arquivo */
+.area-upload {
+    border: 1px dashed #A8A29E;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    background-color: #FAFAFA;
+    transition: all 0.3s;
+}
+
+.area-upload:hover {
+    background-color: #F5F5F5;
+}
+
+.input-file {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #A8A29E;
+}
+
+.upload-texto svg {
+    width: 40px;
+    height: 40px;
+}
+
+.upload-texto span {
+    font-size: 14px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.salvar {
+    background-color: #fff;
+    color: #3B82F6;
+    padding: 12px 24px;
+    border: 1px solid #3B82F6;
+    border-radius: 8px;
+
+}
+.proxima {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2135A6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.proxima:hover {
+    background-color: #2135A6;
+    cursor: pointer;
+}
+
+
+/* Imagem do lado direito */
+
+.ilustracao-toda{
+    width: 500px;
+    height: 500px;
+    top: 140px;
+    left: 712px;
+
+}
+
+
+.imagem-container {
+    flex: 1;
+    background: #2135A6; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.imagem-container .ilustracao {
+    max-width: 70%;
+    height: auto;
+}
+
+.logo-container {
+    position: absolute;
+    bottom: 30px;
+    right: 200px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-container img {
+    height: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .imagem-container {
+        display: none;
+    }
+    
+    .formulario-container {
+        padding: 30px;
+    }
+}
+/* Estilos para personalizar o botão e widget do VLibras */
+div[vw].enabled {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: auto;
+    height: auto;
+    z-index: 100;
+    display: block;
+  }
+  
+  div[vw-access-button].active {
+    opacity: 1;
+    transition: all 0.3s;
+  }
+  
+  div[vw-access-button]:hover {
+    transform: scale(1.1);
+  }
+  
+/* Estilos para as classes usadas pelo JavaScript */
+.mensagem-erro {
+    color: #d32f2f;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.campo-invalido {
+    border-color: #d32f2f !important;
+}
+
+.mensagem-sucesso {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background-color: #edf7ed;
+    color: #1e4620;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.icone-sucesso {
+    fill: #4caf50;
+}
+/* AJUSTES PARA AS MENSAGENS DE VALIDAÇÃO */
+.mensagem-erro {
+    display: block;
+    color: #E74C3C;
+    font-size: 0.8rem;
+    margin-top: 6px;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease;
+}
+
+.campo-invalido {
+    border-color: #E74C3C !important;
+    background-color: #FFF5F5;
+}
+
+.mensagem-sucesso {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background-color: #2ECC71;
+    color: white;
+    border-radius: 8px;
+    margin: 24px 0;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(46, 204, 113, 0.2);
+    animation: slideIn 0.4s ease;
+}
+
+.icone-sucesso {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.alerta-erro {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.input-erro {
+    border: 1px solid red !important;
+}
+
+/* Dispositivos móveis */
+@media (max-width: 767px) {
+    /* Estilos específicos para celulares */
+  }
+  
+  /* Tablets */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    /* Estilos específicos para tablets */
+  }
+  
+  /* Desktops */
+  @media (min-width: 1024px) {
+    /* Estilos específicos para computadores */
+  }

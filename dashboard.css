@@ -1,0 +1,413 @@
+/* Importando o theme.css para o modo escuro */
+@import url('theme.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* Navbar no topo */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0A3D62; /* Azul escuro como solicitado */
+    color: white;
+    padding: 0 20px;
+    height: 70px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links a i {
+    margin-right: 8px;
+}
+
+.nav-links a:hover {
+    color: #A7D7FF;
+}
+
+/* Perfil dropdown */
+.profile-dropdown {
+    position: relative;
+}
+
+.profile-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.profile-icon:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.profile-icon img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-icon span {
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 280px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: none;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    background-color: #f9f9f9;
+}
+
+.dropdown-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    margin-left: 15px;
+}
+
+.user-info h3 {
+    font-size: 16px;
+    color: #333;
+}
+
+.user-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+}
+
+.dropdown-menu ul li {
+    padding: 12px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu ul li:hover {
+    background-color: #f5f5f5;
+}
+
+.dropdown-menu a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu a i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.divider {
+    border-top: 1px solid #eee;
+    margin: 5px 0;
+}
+
+/* Dashboard content */
+.dashboard-content {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.welcome-section {
+    margin-bottom: 30px;
+}
+
+.welcome-section h2 {
+    color: var(--heading-color);
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.welcome-section p {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f7fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.card-header i {
+    font-size: 24px;
+    color: #0A3D62;
+    margin-right: 10px;
+}
+
+.card-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Progress bars */
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.progress-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #0A3D62;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+/* Activity list */
+.activity-list {
+    list-style: none;
+}
+
+.activity-list li {
+    display: flex;
+    padding: 15px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.activity-list li:last-child {
+    border-bottom: none;
+}
+
+.activity-date {
+    min-width: 60px;
+    font-weight: 600;
+    color: #0A3D62;
+}
+
+.activity-info h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: var(--heading-color);
+}
+
+.activity-info p {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* Modo escuro */
+[data-theme="dark"] .dropdown-menu {
+    background-color: #2a2a2a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .dropdown-header {
+    background-color: #333;
+    border-bottom: 1px solid #444;
+}
+
+[data-theme="dark"] .user-info h3 {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .user-info p {
+    color: #aaa;
+}
+
+[data-theme="dark"] .dropdown-menu a {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .dropdown-menu ul li:hover {
+    background-color: #3a3a3a;
+}
+
+[data-theme="dark"] .divider {
+    border-top: 1px solid #444;
+}
+
+[data-theme="dark"] .card-header {
+    background-color: #333;
+    border-bottom: 1px solid #444;
+}
+
+[data-theme="dark"] .progress-bar {
+    background-color: #444;
+}
+
+[data-theme="dark"] .activity-list li {
+    border-bottom: 1px solid #444;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px;
+    }
+    
+    .logo {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .nav-links {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .nav-links ul {
+        justify-content: center;
+        padding: 10px 0;
+    }
+    
+    .nav-links li {
+        margin: 0 10px;
+    }
+    
+    .profile-dropdown {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    
+    .profile-icon span {
+        display: none;
+    }
+    
+    .dashboard-content {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links ul {
+        flex-wrap: wrap;
+    }
+    
+    .nav-links li {
+        margin: 5px 10px;
+    }
+    
+    .welcome-section h2 {
+        font-size: 22px;
+    }
+    
+    .card-header {
+        padding: 15px;
+    }
+    
+    .card-body {
+        padding: 15px;
+    }
+}

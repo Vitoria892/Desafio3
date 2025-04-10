@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Endereço</title>
+    <link rel="stylesheet" href="pagina1.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Lado esquerdo - Formulário -->
+        <div class="formulario-container">
+            <a href="pagina1.html" class="voltar">← Voltar</a>
+            
+            <h1>Endereço residencial</h1>
+            <p class="subtitulo">Informe seu endereço completo para prosseguir com sua inscrição no Programa Trilhas.</p>
+            
+            <div class="secao-titulo">Detalhes do endereço</div>
+            
+            <form id="formulario-endereco">
+                <div class="campo-formulario">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" placeholder="00000-000" required>
+                </div>
+                
+                <div class="campo-formulario">
+                    <label for="rua">Rua</label>
+                    <input type="text" id="rua" placeholder="Nome da rua" required>
+                </div>
+                
+                <div class="campo-formulario">
+                    <label for="numero">Número</label>
+                    <input type="text" id="numero" placeholder="00" required>
+                </div>
+                
+                <div class="campo-formulario">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" placeholder="Digite sua cidade" required>
+                </div>
+                
+                <div class="campo-formulario">
+                    <label for="estado">Estado</label>
+                    <input type="text" id="estado" placeholder="Digite seu Estado" maxlength="2" required>
+                </div>
+                
+                <div class="campo-formulario">
+                    <label for="comprovante">Comprovante de residência</label>
+                    <div class="area-upload">
+                        <input type="file" id="comprovante" accept=".pdf,.jpg,.jpeg,.png" class="input-file" required>
+                        <div class="upload-texto">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 12.5858L16.2929 8.29289L17.7071 9.70711L12 15.4142L6.29289 9.70711L7.70711 8.29289L12 12.5858Z" fill="#A8A29E"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z" fill="#A8A29E"/>
+                            </svg>
+                            <span>Clique aqui para selecionar o arquivo</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="botoes">
+                 
+                    <div class="botoes">
+                        <button type="button" class="salvar">Salvar</button>
+                        <a href="pagina3.html" class="proxima">Próxima</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Lado direito - Fundo azul com imagem -->
+        <div class="imagem-container">
+            <img class="ilustracao" src="ilustração toda.png" alt="Ilustração de pessoa estudando">
+            
+            <div class="logo-container">
+                <img src="trilhas.png.png" alt="Logo Trilhas">
+                <img src="inova.png.png" alt="Logo Inova">
+            </div>
+        </div>
+
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget({
+                rootPah: '/app',
+                personalization: 'https://vlibras.gov.br/config/default_logo.json',
+                translationEnabled: true,
+                textEnabled: true
+            });
+        </script>
+    </div>
+    <script src="pagina2.js"></script>
+</body>
+</html>

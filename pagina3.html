@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilhas de Aprendizagem</title>
+    <link rel="stylesheet" href="pagina3.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Lado esquerdo - Seleção de trilhas -->
+        <div class="formulario-container">
+            <a href="pagina1.html" class="voltar">← Voltar</a>
+            
+            <h1>Trilhas de aprendizagem</h1>
+            <p class="subtitulo">Selecione apenas uma trilha</p>
+            
+            <div class="opcoes-trilhas">
+                <!-- Opção 1: Front-end -->
+                <div class="opcao-trilha">
+                    <input type="radio" id="front-end" name="trilha" value="front-end">
+                    <label for="front-end" class="trilha-card">
+                        <div class="check-circle"></div>
+                        <div class="trilha-icone">
+                            <img src="front-end.png" alt="Ícone Front-end">
+                        </div>
+                        <div class="trilha-nome">Programação Front-end</div>
+                    </label>
+                </div>
+                
+                <!-- Opção 2: Back-end -->
+                <div class="opcao-trilha">
+                    <input type="radio" id="back-end" name="trilha" value="back-end">
+                    <label for="back-end" class="trilha-card">
+                        <div class="check-circle"></div>
+                        <div class="trilha-icone">
+                            <img src="back-end.png" alt="Ícone Back-end">
+                        </div>
+                        <div class="trilha-nome">Programação Back-end</div>
+                    </label>
+                </div>
+                
+                <!-- Opção 3: Jogos -->
+                <div class="opcao-trilha">
+                    <input type="radio" id="jogos" name="trilha" value="jogos">
+                    <label for="jogos" class="trilha-card">
+                        <div class="check-circle"></div>
+                        <div class="trilha-icone">
+                            <img src="jogos.png" alt="Ícone Jogos">
+                        </div>
+                        <div class="trilha-nome">Programação de Jogos</div>
+                    </label>
+                </div>
+                
+                <!-- Opção 4: Design -->
+                <div class="opcao-trilha">
+                    <input type="radio" id="design" name="trilha" value="design">
+                    <label for="design" class="trilha-card">
+                        <div class="check-circle"></div>
+                        <div class="trilha-icone">
+                            <img src="designerexperiencia.png" alt="Ícone Design">
+                        </div>
+                        <div class="trilha-nome">Design e Experiência</div>
+                    </label>
+                </div>
+                
+                <!-- Opção 5: Dados -->
+                <div class="opcao-trilha">
+                    <input type="radio" id="dados" name="trilha" value="dados">
+                    <label for="dados" class="trilha-card">
+                        <div class="check-circle"></div>
+                        <div class="trilha-icone">
+                            <img src="cienciadedados.png" alt="Ícone Dados">
+                        </div>
+                        <div class="trilha-nome">Ciência de Dados</div>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="termos-container">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="termos">
+                    <span class="checkmark"></span>
+                    Declaro que li e concordo com os <a href="termosecondições.html" class="link-destaque">Termos e Condições</a> e com a<a href="politicaprivacidade.html" class="link-destaque">Política de Privacidade</a>.
+                </label>
+            </div>
+            <!-- Adicione este bloco antes da div "botoes" no seu HTML -->
+<div class="campo-formulario consentimento">
+    <label class="checkbox-termos">
+        <input type="checkbox" id="consentimento-dados" required>
+        <span class="checkbox-custom"></span>
+        <span class="texto-termos">Declaro que consinto com o tratamento, uso e armazenamento dos meus dados pessoais conforme a <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" class="link-destaque">Lei Geral de Tratamento de Dados Pessoais (LGPD)</a>.</span>
+    </label>
+</div>
+            
+            <div class="botoes">
+                <a href="index.html" class="cancelar">Cancelar</a>
+                <a href="pagina4.html" class="inscricao">Fazer inscrição</a>
+            </div>
+        </div>
+        
+        <!-- Lado direito - Fundo azul com imagem -->
+        <div class="imagem-container">
+            <img class="ilustracao" src="ilustração toda.png" alt="Ilustração de pessoa estudando">
+            
+            <div class="logo-container">
+                <img src="trilhas.png.png" alt="Logo Trilhas">
+                <img src="inova.png.png" alt="Logo Inova">
+            </div>
+        </div>
+    </div>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget({
+        rootPah: '/app',
+        personalization: 'https://vlibras.gov.br/config/default_logo.json',
+        translationEnabled: true,
+        textEnabled: true
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

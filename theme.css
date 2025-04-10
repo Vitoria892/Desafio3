@@ -1,0 +1,25 @@
+:root {
+    /* Variáveis para o modo claro (padrão) */
+    --bg-color: #f8f9fa;
+    --text-color: #333333;
+    --text-secondary: #666666;
+    --heading-color: #333333;
+    --card-bg: #ffffff;
+    --border-color: #e9ecef;
+    --highlight-color: #0A3D62;
+    --progress-bg: #e9ecef;
+    --progress-bar: #0A3D62;
+}
+
+[data-theme="dark"] {
+    /* Variáveis para o modo escuro */
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --text-secondary: #aaaaaa;
+    --heading-color: #ffffff;
+    --card-bg: #1e1e1e;
+    --border-color: #444444;
+    --highlight-color: #4d94ff;
+    --progress-bg: #333333;
+    --progress-bar: #4d94ff;
+}
