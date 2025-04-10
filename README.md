@@ -11,7 +11,6 @@
 ```bash
 git clone https://github.com/Vitoria892/Desafio3.git
 ```
-```
 
 2.Acesse a pasta:
 ```bash
