@@ -8,8 +8,8 @@
 
 # Instruções para rodar o projeto no seu ambiente local: 
 1.Copie o repositorio:
-''' bash
-git clone https://github.com/Vitoria892/Desafio03.git  
+'''bash
+ 
 '''
 '''
 2.Acesse a pasta: cd desafio03  
