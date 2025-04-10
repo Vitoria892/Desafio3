@@ -6,5 +6,12 @@
 
 # Principais Funcionalidades e Destaques • Interface intuitiva e responsiva adaptada para diversos dispositivos; • Validação em tempo real dos campos do formulário; • Upload e validação de documentos; • Confirmação de dados conforme LGPD; • Sistema de revisão antes do envio final; • Acessibilidade.
 
-# Instruções para rodar o projeto no seu ambiente local: 1.Copie o repositorio: https://github.com/Vitoria892/Desafio03.git  2.Acesse a pasta: cd desafio03   3. Acesse o arquivo index.html no seu navegador: dê dois clique no arquivo para acessá-lo.
+# Instruções para rodar o projeto no seu ambiente local: 
+1.Copie o repositorio:
+''' bash
+git clone https://github.com/Vitoria892/Desafio03.git  
+'''
+'''
+2.Acesse a pasta: cd desafio03  
+3. Acesse o arquivo index.html no seu navegador: dê dois clique no arquivo para acessá-lo.
 
